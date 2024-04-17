@@ -1,0 +1,23 @@
+package Launch_selenium;
+//97
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Display_and_enable {
+
+	public static void main(String[] args)
+	{
+   ChromeDriver driver=new ChromeDriver();
+   driver.get("https://www.google.com/");
+   WebElement ab=driver.findElement(By.name("q"));
+   ab.sendKeys("india");
+   if(ab.isDisplayed() == true && ab.isEnabled() == true)
+   {
+	   ab.sendKeys(Keys.ENTER);
+   }
+   
+	}
+
+}

@@ -1,0 +1,26 @@
+package Launch_selenium;
+//91
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Xpath_dd {
+
+	public static void main(String[] args) throws InterruptedException {
+     ChromeDriver driver=new ChromeDriver();
+     driver.get("https://www.amazon.in/");
+    WebElement dd=driver.findElement(By.xpath("(//select)[1]"));
+   
+    Select s1=new Select(dd); //passing argument(dd) is because to do the action on webelement's component
+    s1.selectByValue("search-alias=stripbooks");
+   WebElement sc=driver.findElement(By.xpath("//input[@ name='field-keywords']"));
+    sc.sendKeys("world");
+    Thread.sleep(1000);
+    sc.sendKeys(Keys.ENTER);
+    
+    
+	}
+
+}

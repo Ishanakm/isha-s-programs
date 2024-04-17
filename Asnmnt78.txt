@@ -1,0 +1,15 @@
+package Launch_selenium;
+//78
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Search_india {
+
+	public static void main(String[] args) {
+		  ChromeDriver driver=new ChromeDriver();//opens empty browser
+		  driver.get("https://www.google.com");//opens perticular browser
+		driver.findElement(By.name("q")).sendKeys("india");
+		driver.findElement(By.xpath("(//input[@name='btnK'])[2]")).click();
+	}
+
+}

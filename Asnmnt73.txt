@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.TreeSet;
+import java.util.Vector;
+
+public class Asnmnt1 
+{
+  public static void main(String[] args)
+  {	//LinkedHashSet
+	    LinkedHashSet h3=new LinkedHashSet();
+	    h3.add(1);
+		h3.add(3.14);
+		h3.add("ishayaz");
+		h3.add(null);
+		h3.add(true);
+		h3.add('a');
+		h3.add('a');
+		h3.add("");
+		h3.add("ishayaz");
+		h3.add(null);
+		System.out.println(h3);
+		
+		 LinkedHashSet h4=new LinkedHashSet();
+		    h4.add(13);
+			h4.add(63);
+			h4.add(100);
+			h4.add(40);
+			h4.add(20);
+			System.out.println(h4);
+  }
+}

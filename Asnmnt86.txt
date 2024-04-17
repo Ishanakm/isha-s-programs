@@ -1,0 +1,24 @@
+package Launch_selenium;
+//86.select the first shoe
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Launchamazon_shoe {
+
+	public static void main(String[] args)
+	{
+      ChromeDriver driver=new ChromeDriver();
+      driver.get("https://www.amazon.in/");
+    WebElement type=  driver.findElement(By.xpath("(//input)[5]"));
+    type.sendKeys("shoe");
+    
+  WebElement click=  driver.findElement(By.xpath("(//input)[6]"));
+  click.click();
+  
+    WebElement select= driver.findElement(By.xpath("(//div[@class='a-section aok-relative s-image-tall-aspect'])[1]"));
+    select.click();
+      
+	}
+
+}

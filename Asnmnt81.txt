@@ -1,0 +1,29 @@
+package Launch_selenium;
+//81.grotechminds
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Launch_browser 
+{
+
+	public static void main(String[] args)
+	{
+      ChromeDriver driver=new ChromeDriver();//opens empty browser
+	  driver.get("https://grotechminds.com");//opens perticular browser
+	  String title=driver.getTitle();//get the title of the page
+	  System.out.println(title);
+	  //driver.quit();//closes the browser
+	  driver.manage().window().maximize();//maximizes the window
+	  //driver.manage().window().minimize();//minimizesthe window
+	 driver.findElement(By.className("elementor-item")).click();
+	  driver.get("https://grotechminds.com/registration");
+		driver.findElement(By.name("email")).sendKeys("ishanakodambadi@gmail.com");
+	    driver.findElement(By.id("password")).sendKeys("ishanacoorg@88");
+	    driver.findElement(By.id("Female")).click();
+	   driver.findElement(By.name("Present-Address")).sendKeys("madikeri");
+	   driver.findElement(By.id("Permanent-Address")).sendKeys("kushalnagar");
+	   driver.findElement(By.name("Pincode")).sendKeys("571237");
+	   driver.findElement(By.id("relocate")).click();
+	}
+
+}

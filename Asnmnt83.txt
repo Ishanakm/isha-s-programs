@@ -1,0 +1,19 @@
+package Launch_selenium;
+//83.launch amazon india click on mobile using linktext
+//
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Asnmt3 {
+
+	public static void main(String[] args) 
+	{
+       ChromeDriver driver=new ChromeDriver();
+       driver.get("https://www.amazon.in");
+       driver.manage().window().minimize();
+     driver.findElement(By.linkText("Mobiles")).click();
+    
+     
+	}
+
+}

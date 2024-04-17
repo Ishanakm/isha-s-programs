@@ -1,0 +1,14 @@
+package Launch_selenium;
+//76
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Title_flipkart {
+
+	public static void main(String[] args) {
+		  ChromeDriver driver=new ChromeDriver();//opens empty browser
+		  driver.get("https://www.flipkart.com");//opens perticular browser
+		  String title=driver.getTitle();//get the title of the page
+		  System.out.println(title);
+	}
+
+}

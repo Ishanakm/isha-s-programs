@@ -1,0 +1,26 @@
+package Launch_selenium;
+//103.drag and drop postman
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Drag_drop_gtm {
+
+	public static void main(String[] args) 
+	{
+		ChromeDriver driver =new ChromeDriver();
+	      driver.get("https://grotechminds.com/");
+	     WebElement link= driver.findElement(By.linkText("Automate Me"));
+	     link.click();
+	   driver.get("https://grotechminds.com/drag-and-drop/");
+	   WebElement postman=driver.findElement(By.xpath("//img[@id='drag7']"));
+	   WebElement drop=driver.findElement(By.xpath("//div[@id='div2']"));
+	   Actions a1=new Actions (driver);
+	   a1.dragAndDrop(postman, drop).perform();
+	   a1.doubleClick(drop).perform();
+	   
+	   
+	}
+
+}

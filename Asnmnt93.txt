@@ -1,0 +1,24 @@
+package Launch_selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+//93
+//launch google type coorg arrow down 3 times press enter
+public class Arrow_down {
+
+	public static void main(String[] args) throws InterruptedException
+	{
+      ChromeDriver driver=new ChromeDriver();
+      driver.get("https://www.google.com");
+      WebElement pass=driver.findElement(By.name("q"));
+      pass.sendKeys("coorg");
+      pass.sendKeys(Keys.ARROW_DOWN);
+      pass.sendKeys(Keys.ARROW_DOWN);
+      pass.sendKeys(Keys.ARROW_DOWN);
+     Thread.sleep(3000);
+      pass.sendKeys(Keys.ENTER);
+	}
+
+}
